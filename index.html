@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+<section>
+	<h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY? </h1>
+	<div class="centerDiv">
+		<div class="details">
+			<label>ENTER YOUR NAME</label> <br>
+			<input type="text" name="" id="nameid">
+		</div>
+
+		<div class="imgdiv">
+			<img scr="image.png" width="200" height="200" class="imgchange">
+		</div>
+
+		<button>Click me</button>
+		
+	</div>
+
+
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function(){
+		$('button').click(function(){
+			const name = $('#nameid').val();
+			alert(name);
+			$('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}
+`);
+		});
+	});
+</script>
+
+
+</body>
+</html>
